@@ -1,0 +1,43 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tirt.tirtclient.TasksFragment"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="                 Tasks"
+        android:id="@+id/tasksTextView"
+        android:layout_weight="0.04"
+        android:textSize="30dp"
+        android:background="#F74B2D"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Task"
+        android:id="@+id/newTaskButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.04"
+        android:background="#FF4437"
+        android:layout_above="@+id/listTaskButton"
+        android:layout_alignStart="@+id/listTaskButton"
+        android:layout_marginBottom="69dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task list"
+        android:id="@+id/listTaskButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.04"
+        android:background="#FF4437"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

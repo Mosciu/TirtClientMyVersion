@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/Projekt1"
+        android:title="Projekt1"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/Projekt2"
+        android:title="Projekt2"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/Projekt3"
+        android:title="Projekt3"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="tirt.tirtclient.SprintBacklogFragment"
+    android:background="#DCC9B0">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="            Sprint Review"
+        android:textSize="30dp"
+        android:id="@+id/sprintBacklogTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="#F74B2D"
+        android:height="60dp"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/sprintReviewEditText"
+        android:layout_below="@+id/sprintBacklogTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="31dp"
+        android:background="#FFFFFF"
+        android:height="250dp"
+        android:width="275dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Sprint Review"
+        android:id="@+id/saveSprintReviewButton"
+        android:layout_below="@+id/sprintReviewEditText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="38dp"
+        android:background="#FF4437"
+        android:width="150dp" />
+</RelativeLayout>

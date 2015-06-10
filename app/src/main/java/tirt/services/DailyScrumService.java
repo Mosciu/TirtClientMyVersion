@@ -1,5 +1,7 @@
 package tirt.services;
 
+import java.util.List;
+
 import retrofit.Callback;
 import retrofit.http.Body;
 import retrofit.http.GET;
@@ -13,8 +15,11 @@ import tirt.pojos.PojoDailyScrum;
  */
 public interface DailyScrumService {
 
-    @GET("dailyscrums/{id}.json")
+    @GET("/dailyscrums/{id}.json")
     public PojoDailyScrum getDailyScrum (@Path("id") Long id);
+
+    @GET("/dailyscrums/list.json")
+    public void getAllDailyScrums(Callback<List<PojoDailyScrum>> callback);
 
     @POST("/dailyscrums/new")
     public void saveDailyScrum(@Body PojoDailyScrum pojoDailyScrum, Callback<PojoDailyScrum> callback);

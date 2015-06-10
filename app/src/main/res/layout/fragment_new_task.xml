@@ -1,0 +1,45 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tirt.tirtclient.NewTaskFragment"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="#DCC9B0"
+    android:id="@+id/IdLinear">
+
+    <TextView android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="       New Task"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:background="#F74B2D"
+        android:id="@+id/newTaskTextView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/newTaskEditText"
+        android:background="#FFFFFF"
+        android:autoText="false"
+        android:layout_below="@+id/newTaskTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:height="250dp"
+        android:width="275dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Task"
+        android:id="@+id/newTaskSaveButton"
+        android:layout_marginTop="25dp"
+        android:background="#FF4437"
+        android:width="150dp"
+        android:layout_below="@+id/newTaskEditText"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

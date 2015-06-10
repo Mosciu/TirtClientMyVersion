@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="tirt.tirtclient.NewSprintPlanning"
+    android:background="#DCC9B0"
+    android:orientation="vertical"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:id="@+id/layoutsaa"
+    >
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Date"
+        android:id="@+id/textView"
+        android:background="#ED6849" />
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startDatePicker"
+        android:layout_weight="0.2"
+        android:calendarViewShown="false"
+        android:layout_gravity="center_vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DeadLine"
+        android:id="@+id/textView2"
+        android:background="#ED6849" />
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:calendarViewShown="false"
+        android:id="@+id/endDatePicker" />
+
+    <Button
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/sprintPlanningSaveButton"
+        android:background="#ED6849"
+        android:layout_gravity="right"
+        android:height="20dp"
+        android:clickable="true" />
+
+
+</LinearLayout>

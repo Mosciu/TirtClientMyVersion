@@ -26,8 +26,9 @@ public class SprintReviewFragment extends Fragment implements View.OnClickListen
 
     private RestClient restClient;
     private PojoSprintReview sprintReview;
+    private Fragment fragment;
 
-    private EditText pojoSprintReview;
+    private EditText sprintReviewEditText;
 
     private Button saveSprintReview;
 
@@ -45,46 +46,25 @@ public class SprintReviewFragment extends Fragment implements View.OnClickListen
 
         View rootView = inflater.inflate(R.layout.fragment_sprint_review, container, false);
 
-        pojoSprintReview = (EditText) rootView.findViewById(R.id.sprintReviewText);
-        saveSprintReview = (Button) rootView.findViewById(R.id.sprintReviewButton);
+        sprintReviewEditText = (EditText) rootView.findViewById(R.id.sprintReviewEditText);
+        saveSprintReview = (Button) rootView.findViewById(R.id.saveSprintReviewButton);
         saveSprintReview.setOnClickListener(this);
         return rootView;
 
-
-       /*** Display Sprint review
-        try {
-        sprintReview = client.getSprintReviewService().getSprintReview(Long.parseLong("1"));
-        }catch(Exception e)
-        {
-        e.printStackTrace();
-        }
-
-        View rootView = inflater.inflate(R.layout.fragment_sprint_review, container, false);
-
-        TextView id = (TextView) rootView.findViewById(R.id.SprintReviewId);
-        id.setText("ID: "+sprintReview.getId());
-
-        TextView SprintId = (TextView) rootView.findViewById(R.id.SprintId);
-        SprintId.setText("SprintId: "+sprintReview.getSprintId());
-
-        TextView SprintReview = (TextView) rootView.findViewById(R.id.SprintReview);
-        SprintReview.setText("SprintReview: "+sprintReview.getReview());
-        return rootView;
-        */
     }
 
 
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.sprintReviewButton:
-                sprintReview.setReview(pojoSprintReview.getText().toString());
+            case R.id.saveSprintReviewButton:
+                sprintReview.setReview(sprintReviewEditText.getText().toString());
                 //sprintReview.setSprintId(Long.parseLong("1"));
                 if (!sprintReview.getReview().equals("")) {
                 restClient.getSprintReviewService().saveSprintReview(sprintReview,new Callback<PojoSprintReview>() {
                     @Override
                     public void success(PojoSprintReview pojoSprintReview, Response response) {
-                        Toast.makeText(getActivity(), "Sprint Review saved!", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getActivity(), "Sprint Review saved!", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override

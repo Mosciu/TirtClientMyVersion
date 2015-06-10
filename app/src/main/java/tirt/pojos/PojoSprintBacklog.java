@@ -7,15 +7,6 @@ public class PojoSprintBacklog {
 
     private long id;
     private String description;
-    private long sprintid;
-
-    public long getSprintid() {
-        return sprintid;
-    }
-
-    public void setSprintid(long sprintid) {
-        this.sprintid = sprintid;
-    }
 
     public long getId() {
         return id;
@@ -33,10 +24,6 @@ public class PojoSprintBacklog {
         this.description = description;
     }
 
-
-
-
     public PojoSprintBacklog(){}
-
 
 }

@@ -47,6 +47,7 @@ public class TaskListFragment extends Fragment {
         try {
             List<PojoTask> tasks = restClient.getTaskService().collectTasks();
 
+
             StringBuilder builder = new StringBuilder();
             for(PojoTask task : tasks){
                 builder.append("Description: "+task.getTaskDescription() + " Status: "+task.isStatus()+"\n");
@@ -55,7 +56,7 @@ public class TaskListFragment extends Fragment {
             taskListText.setText(builder.toString());
 
         }catch(Exception ex){
-            taskListText.setText("Błąd połączenia z internetem!");
+            taskListText.setText("Błąd połączenia z serwerem");
         }
 
 

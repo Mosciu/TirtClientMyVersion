@@ -40,8 +40,8 @@ public class SprintBacklogFragment extends Fragment implements View.OnClickListe
 
         View rootView = inflater.inflate(R.layout.fragment_sprint_backlog, container, false);
 
-        //sprintBacklogEditText = (EditText) rootView.findViewById(R.id.SprintBacklogEditText);
-        //saveSprintBacklog = (Button) rootView.findViewById(R.id.SprintBacklogButton);
+        sprintBacklogEditText = (EditText) rootView.findViewById(R.id.SprintBacklogEditText);
+        saveSprintBacklog = (Button) rootView.findViewById(R.id.SaveSprintBacklogButton);
         saveSprintBacklog.setOnClickListener(this);
 
         return rootView;
@@ -52,7 +52,7 @@ public class SprintBacklogFragment extends Fragment implements View.OnClickListe
     public void onClick(View v) {
 
         switch(v.getId()){
-            case 1:
+            case R.id.SaveSprintBacklogButton:
                 pojoSprintBacklog.setDescription(sprintBacklogEditText.getText().toString());
                 if(!pojoSprintBacklog.getDescription().equals("")){
                     restClient.getSprintBacklogService().saveSprintBacklog(pojoSprintBacklog,new Callback<PojoSprintBacklog>() {

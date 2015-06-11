@@ -18,10 +18,13 @@ public interface DailyScrumService {
     @GET("/dailyscrums/{id}.json")
     public PojoDailyScrum getDailyScrum (@Path("id") Long id);
 
-    @GET("/dailyscrums/list.json")
-    public void getAllDailyScrums(Callback<List<PojoDailyScrum>> callback);
+    @GET("/dailyscrums/list")
+    public List<PojoDailyScrum> collectDailyScrums();
 
     @POST("/dailyscrums/new")
     public void saveDailyScrum(@Body PojoDailyScrum pojoDailyScrum, Callback<PojoDailyScrum> callback);
+
+    @POST("/dailyscrums/edit")
+    public void editDailyScrum(@Body PojoDailyScrum pojoDailyScrum, Callback<PojoDailyScrum> callback);
 
 }
